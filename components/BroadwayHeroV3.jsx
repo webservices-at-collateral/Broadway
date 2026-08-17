@@ -1,127 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Broadway Export LLC — Forward Thinking Trade</title>
-<meta name="description" content="A global trade platform specializing in the import and export of goods and merchandise." />
+import React from "react";
 
-<style>
-  @font-face {
-    font-family: 'Produkt';
-    src: url('./fonts/produkt-regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
+/**
+ * Broadway Export LLC v3 — Hero Section
+ * Implementado a partir do Figma (node 74:95 — "BX Realty" / Broadway Export LLC v3)
+ * https://www.figma.com/design/Nsf5sTZVQZUnpNVyxlHeeb/BX-Capital--Website-Covers?node-id=74-95
+ *
+ * Layout alinhado à esquerda, com foto (recorte em seta) posicionada à
+ * direita, encostando topo e rodapé, escala preservada. Diferente das
+ * outras v3, aqui o subtítulo "Forward Thinking Trade" é um texto separado
+ * (não composto no SVG da logo).
+ *
+ * Fonte: Produkt (subtítulo e parágrafo), carregada via next/font em
+ * app/layout.js e exposta como a CSS variable --font-produkt.
+ */
 
-  * {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .hero {
-    position: relative;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    overflow: hidden;
-    padding: 96px 24px;
-    background: linear-gradient(90deg, #0E354F 0%, #000E17 100%);
-  }
-
-  @media (min-width: 640px) {
-    .hero {
-      padding: 96px 64px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .hero {
-      padding: 96px 112px;
-    }
-  }
-
-  /* TEMPORÁRIO: imagem ainda inclui gradiente/linhas embutidos (full-bleed).
-     Trocar para object-fit: contain + right/top quando o asset isolado chegar. */
-  .hero__bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-  }
-
-  .hero__content {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    width: 100%;
-    max-width: 524px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 48px;
-    text-align: left;
-  }
-
-  .hero__lockup {
-    height: 46px;
-    width: auto;
-  }
-
-  @media (min-width: 640px) {
-    .hero__lockup {
-      height: 61px;
-    }
-  }
-
-  .hero__copy {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  .hero__subheading {
-    font-family: 'Produkt', serif;
-    font-weight: 400;
-    font-size: 32px;
-    font-style: normal;
-    line-height: 1.2;
-    color: #FFF;
-    text-align: left;
-    margin: 0;
-  }
-
-  .hero__paragraph {
-    max-width: 524px;
-    font-family: 'Produkt', serif;
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.72);
-    text-align: left;
-    margin: 0;
-  }
-</style>
-</head>
-<body>
-
-<section class="hero">
-  <img class="hero__bg" src="./images/hero-broadway.png" alt="" aria-hidden="true" />
-
-  <div class="hero__content">
-
-    <!-- Lockup: logo "Broadway Export LLC" (SVG real) -->
-    <svg class="hero__lockup" viewBox="0 0 637 61" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Broadway Export LLC">
+function BroadwayLockup({ className }) {
+  return (
+    <svg
+      viewBox="0 0 637 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      role="img"
+      aria-label="Broadway Export LLC"
+    >
 <g id="Vector">
 <path d="M0 42.9626H5.08694V9.53266H0V3.2194H21.5724C31.1025 3.2194 36.6408 6.89202 36.6408 15.202V15.4582C36.6408 20.0955 34.58 23.6388 29.3638 25.25C35.7397 26.6026 38.5722 29.9521 38.5722 36.1347V36.3934C38.5722 44.9595 32.9059 49.2761 22.7954 49.2761H0V42.9626ZM20.4773 22.6091C26.2083 22.6091 28.398 20.6124 28.398 15.9104V15.6517C28.398 11.2704 25.8216 9.53241 20.4127 9.53241H13.4577V22.6089L20.4773 22.6091ZM21.765 42.9626C27.4972 42.9626 30.137 40.4513 30.137 35.7492V35.4905C30.137 30.7898 27.5606 28.4053 21.186 28.4053H13.4579V42.9626H21.765Z" fill="white"/>
 <path d="M41.4818 49.2758V43.5418H45.5397V21.5125H41.4184V15.5872H53.3313V22.286C55.1347 17.972 58.6122 15.0727 65.0515 15.0727V22.5447C57.7745 22.3507 53.3313 24.6708 53.3313 31.7573V43.5421H57.7745V49.2761L41.4818 49.2758Z" fill="white"/>
@@ -143,16 +45,53 @@
 </g>
 
     </svg>
+  );
+}
 
-    <div class="hero__copy">
-      <h2 class="hero__subheading">Forward Thinking Trade</h2>
-      <p class="hero__paragraph">
-        A global trade platform specializing in the import and export of goods and merchandise. Decades of international sourcing and operational expertise anchor BX Group's long-term perspective.
-      </p>
-    </div>
+export default function BroadwayHeroV3() {
+  return (
+    <section
+      className="relative flex h-screen w-full items-center overflow-hidden px-6 py-24 sm:px-16 lg:px-28"
+      style={{ background: "linear-gradient(90deg, #0E354F 0%, #000E17 100%)" }}
+    >
+      {/* Background full-bleed temporário (a imagem ainda inclui gradiente/linhas do Figma) */}
+      <img
+        src="/images/hero-broadway.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+      />
 
-  </div>
-</section>
+      <div className="relative z-10 flex w-full max-w-[524px] flex-col items-start gap-12 text-left">
+        {/* Lockup: logo "Broadway Export LLC" */}
+        <BroadwayLockup className="h-[46px] w-auto sm:h-[61px]" />
 
-</body>
-</html>
+        <div className="flex w-full flex-col items-start gap-4">
+          {/* Subheading */}
+          <h2
+            className="text-white"
+            style={{ fontFamily: "var(--font-produkt), serif", fontSize: "32px", fontWeight: 400, lineHeight: "1.2" }}
+          >
+            Forward Thinking Trade
+          </h2>
+
+          {/* Paragraph */}
+          <p
+            className="max-w-[524px] text-left"
+            style={{
+              fontFamily: "var(--font-produkt), serif",
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "1.4",
+              color: "rgba(255,255,255,0.72)",
+            }}
+          >
+            A global trade platform specializing in the import and export of
+            goods and merchandise. Decades of international sourcing and
+            operational expertise anchor BX Group's long-term perspective.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

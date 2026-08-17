@@ -1,9 +1,9 @@
-import BroadwayHero from "../components/BroadwayHero";
+import BroadwayHeroV3 from "../components/BroadwayHeroV3";
 
 export default function Home() {
   return (
     <main>
-      <BroadwayHero />
+      <BroadwayHeroV3 />
     </main>
   );
 }
