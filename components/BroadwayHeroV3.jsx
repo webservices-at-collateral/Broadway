@@ -54,12 +54,12 @@ export default function BroadwayHeroV3() {
       className="relative flex h-screen w-full items-center overflow-hidden px-6 py-24 sm:px-16 lg:px-28"
       style={{ background: "linear-gradient(90deg, #0E354F 0%, #000E17 100%)" }}
     >
-      {/* Background full-bleed temporário (a imagem ainda inclui gradiente/linhas do Figma) */}
+      {/* Foto (recorte em seta), à direita, encostando topo/rodapé, escala preservada */}
       <img
         src="/images/hero-broadway.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        className="pointer-events-none absolute right-0 top-0 h-full w-auto object-contain object-right"
       />
 
       <div className="relative z-10 flex w-full max-w-[524px] flex-col items-start gap-12 text-left">
@@ -80,7 +80,7 @@ export default function BroadwayHeroV3() {
             className="max-w-[524px] text-left"
             style={{
               fontFamily: "var(--font-produkt), serif",
-              fontSize: "20px",
+              fontSize: "16px",
               fontWeight: 400,
               lineHeight: "1.4",
               color: "rgba(255,255,255,0.72)",

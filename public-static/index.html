@@ -47,14 +47,14 @@
     }
   }
 
-  /* TEMPORÁRIO: imagem ainda inclui gradiente/linhas embutidos (full-bleed).
-     Trocar para object-fit: contain + right/top quando o asset isolado chegar. */
   .hero__bg {
     position: absolute;
-    inset: 0;
-    width: 100%;
+    right: 0;
+    top: 0;
     height: 100%;
-    object-fit: cover;
+    width: auto;
+    object-fit: contain;
+    object-position: right;
     pointer-events: none;
   }
 
