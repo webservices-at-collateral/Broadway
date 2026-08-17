@@ -80,7 +80,7 @@ export default function BroadwayHeroV3() {
             className="max-w-[524px] text-left"
             style={{
               fontFamily: "var(--font-produkt), serif",
-              fontSize: "16px",
+              fontSize: "20px",
               fontWeight: 400,
               lineHeight: "1.4",
               color: "rgba(255,255,255,0.72)",
