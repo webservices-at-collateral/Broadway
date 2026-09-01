@@ -59,9 +59,23 @@ export default function BroadwayHeroV3() {
         src="/images/hero-broadway.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 h-full w-auto object-contain object-right"
+        className="pointer-events-none absolute inset-y-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 object-contain"
+        style={{
+          filter:
+            "drop-shadow(0 40px 80px rgba(0, 0, 0, 0.45)) drop-shadow(0 12px 28px rgba(0, 0, 0, 0.35))",
+        }}
       />
 
+      {/* Scrim para legibilidade do texto sobre a imagem em tablet/phone */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[5] lg:hidden"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(0,14,23,0.8) 0%, rgba(0,14,23,0.6) 35%, rgba(0,14,23,0.3) 65%, rgba(0,14,23,0) 100%)",
+          pointerEvents: "none",
+        }}
+      />
       <div className="relative z-10 flex w-full max-w-[524px] flex-col items-start gap-12 text-left">
         {/* Lockup: logo "Broadway Export LLC" */}
         <BroadwayLockup className="h-[46px] w-auto sm:h-[61px]" />
