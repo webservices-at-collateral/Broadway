@@ -78,7 +78,7 @@ export default function BroadwayHeroV3() {
       />
       <div className="relative z-10 flex w-full max-w-[524px] flex-col items-start gap-12 text-left">
         {/* Lockup: logo "Broadway Export LLC" */}
-        <BroadwayLockup className="h-[46px] w-auto sm:h-[61px]" />
+        <BroadwayLockup className="h-[26px] w-auto max-w-full sm:h-[40px] lg:h-[61px]" />
 
         <div className="flex w-full flex-col items-start gap-4">
           {/* Subheading */}
