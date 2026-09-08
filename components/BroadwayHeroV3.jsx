@@ -100,9 +100,11 @@ export default function BroadwayHeroV3() {
               color: "rgba(255,255,255,0.72)",
             }}
           >
-            A global trade platform specializing in the import and export of
-            goods and merchandise. Decades of international sourcing and
-            operational expertise anchor BX Group's long-term perspective.
+            Founded in 1954 and managed by the Tawil family, Broadway Export
+            is a New York–based import-export company specializing in the
+            global trade of goods and merchandise, combining operational
+            expertise, international sourcing, and optimized service
+            management.
           </p>
         </div>
       </div>
