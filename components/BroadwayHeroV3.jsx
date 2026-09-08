@@ -76,7 +76,7 @@ export default function BroadwayHeroV3() {
           pointerEvents: "none",
         }}
       />
-      <div className="relative z-10 flex w-full max-w-[524px] flex-col items-start gap-12 text-left">
+      <div className="relative z-10 flex w-full max-w-[680px] flex-col items-start gap-12 text-left">
         {/* Lockup: logo "Broadway Export LLC" */}
         <BroadwayLockup className="h-[26px] w-auto max-w-full sm:h-[40px] lg:h-[61px]" />
 
@@ -91,7 +91,7 @@ export default function BroadwayHeroV3() {
 
           {/* Paragraph */}
           <p
-            className="max-w-[524px] text-left"
+            className="max-w-[680px] text-left"
             style={{
               fontFamily: "var(--font-produkt), serif",
               fontSize: "20px",
