@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="./images/favicon.png" />
 <title>Broadway Export LLC — Forward Thinking Trade</title>
-<meta name="description" content="A global trade platform specializing in the import and export of goods and merchandise." />
+<meta name="description" content="Founded in 1954 and managed by the Tawil family, Broadway Export is a New York-based import-export company specializing in the global trade of goods and merchandise." />
 
 <style>
   @font-face {
@@ -29,33 +30,49 @@
     display: flex;
     height: 100vh;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
     overflow: hidden;
-    padding: 96px 24px;
+    padding: 1vh 24px 0;
     background: linear-gradient(90deg, #0E354F 0%, #000E17 100%);
   }
 
   @media (min-width: 640px) {
     .hero {
-      padding: 96px 64px;
+      padding: 18vh 64px 0;
     }
   }
 
   @media (min-width: 1024px) {
     .hero {
-      padding: 96px 112px;
+      padding: 25vh 112px 0;
     }
   }
 
   .hero__bg {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     height: 100%;
     width: auto;
     object-fit: contain;
-    object-position: right;
     pointer-events: none;
+    filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.45))
+      drop-shadow(0 12px 28px rgba(0, 0, 0, 0.35));
+  }
+
+  .hero__scrim {
+    display: none;
+  }
+
+  @media (max-width: 1023px) {
+    .hero__scrim {
+      display: block;
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      background: linear-gradient(90deg, rgba(0,14,23,0.8) 0%, rgba(0,14,23,0.6) 35%, rgba(0,14,23,0.3) 65%, rgba(0,14,23,0) 100%);
+      pointer-events: none;
+    }
   }
 
   .hero__content {
@@ -63,7 +80,7 @@
     z-index: 10;
     display: flex;
     width: 100%;
-    max-width: 524px;
+    max-width: 680px;
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
@@ -71,11 +88,18 @@
   }
 
   .hero__lockup {
-    height: 46px;
+    height: 26px;
     width: auto;
+    max-width: 100%;
   }
 
   @media (min-width: 640px) {
+    .hero__lockup {
+      height: 40px;
+    }
+  }
+
+  @media (min-width: 1024px) {
     .hero__lockup {
       height: 61px;
     }
@@ -101,7 +125,7 @@
   }
 
   .hero__paragraph {
-    max-width: 524px;
+    max-width: 680px;
     font-family: 'Produkt', serif;
     font-weight: 400;
     font-size: 16px;
@@ -117,6 +141,9 @@
 
 <section class="hero">
   <img class="hero__bg" src="./images/hero-broadway.png" alt="" aria-hidden="true" />
+
+  <div class="hero__scrim" aria-hidden="true"></div>
+
 
   <div class="hero__content">
 
@@ -147,7 +174,7 @@
     <div class="hero__copy">
       <h2 class="hero__subheading">Forward Thinking Trade</h2>
       <p class="hero__paragraph">
-        Founded in 1954 and managed by the Tawil family, Broadway Export is a New York–based import-export company specializing in the global trade of goods and merchandise, combining operational expertise, international sourcing, and optimized service management.
+        Founded in 1954 and managed by the Tawil family, Broadway Export is a New York&ndash;based import-export company specializing in the global trade of goods and merchandise, combining operational expertise, international sourcing, and optimized service management.
       </p>
     </div>
 
