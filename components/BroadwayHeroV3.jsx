@@ -17,14 +17,14 @@ import React from "react";
 function BroadwayLockup({ className }) {
   return (
     <svg
-      viewBox="0 0 637 61"
+      viewBox="0 0 1002.4918 96"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       role="img"
       aria-label="Broadway Export LLC"
     >
-<g id="Vector">
+<g id="Vector" transform="scale(1.5737704918)">
 <path d="M0 42.9626H5.08694V9.53266H0V3.2194H21.5724C31.1025 3.2194 36.6408 6.89202 36.6408 15.202V15.4582C36.6408 20.0955 34.58 23.6388 29.3638 25.25C35.7397 26.6026 38.5722 29.9521 38.5722 36.1347V36.3934C38.5722 44.9595 32.9059 49.2761 22.7954 49.2761H0V42.9626ZM20.4773 22.6091C26.2083 22.6091 28.398 20.6124 28.398 15.9104V15.6517C28.398 11.2704 25.8216 9.53241 20.4127 9.53241H13.4577V22.6089L20.4773 22.6091ZM21.765 42.9626C27.4972 42.9626 30.137 40.4513 30.137 35.7492V35.4905C30.137 30.7898 27.5606 28.4053 21.186 28.4053H13.4579V42.9626H21.765Z" fill="white"/>
 <path d="M41.4818 49.2758V43.5418H45.5397V21.5125H41.4184V15.5872H53.3313V22.286C55.1347 17.972 58.6122 15.0727 65.0515 15.0727V22.5447C57.7745 22.3507 53.3313 24.6708 53.3313 31.7573V43.5421H57.7745V49.2761L41.4818 49.2758Z" fill="white"/>
 <path d="M67.055 32.7867V32.2721C67.055 21.8363 74.46 14.8789 84.3768 14.8789C94.1656 14.8789 101.635 21.7714 101.635 32.0781V32.5927C101.635 43.0919 94.1656 49.92 84.3122 49.92C74.3307 49.92 67.055 43.0922 67.055 32.7867ZM93.6496 32.7221V32.2075C93.6496 24.9916 90.1075 20.7423 84.3766 20.7423C78.5166 20.7423 75.0388 24.9916 75.0388 32.1428V32.6574C75.0388 39.8073 78.4517 44.1239 84.3766 44.1239C90.2365 44.1239 93.6496 39.7427 93.6496 32.7221Z" fill="white"/>
@@ -78,7 +78,7 @@ export default function BroadwayHeroV3() {
       />
       <div className="relative z-10 flex w-full max-w-[680px] flex-col items-start gap-12 text-left">
         {/* Lockup: logo "Broadway Export LLC" */}
-        <BroadwayLockup className="h-[26px] w-auto max-w-full sm:h-[40px] lg:h-[61px]" />
+        <BroadwayLockup className="h-[26px] w-auto max-w-full sm:h-[40px] lg:h-[74px]" />
 
         <div className="flex w-full flex-col items-start gap-4">
           {/* Subheading */}
