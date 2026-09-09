@@ -69,7 +69,7 @@ export default function BroadwayHeroV3() {
       {/* Scrim para legibilidade do texto sobre a imagem em tablet/phone */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-[5] lg:hidden"
+        className="absolute inset-0 z-[5]"
         style={{
           background:
             "linear-gradient(90deg, rgba(0,14,23,0.8) 0%, rgba(0,14,23,0.6) 35%, rgba(0,14,23,0.3) 65%, rgba(0,14,23,0) 100%)",
