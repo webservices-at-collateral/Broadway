@@ -81,7 +81,11 @@ export default function BroadwayHeroV3() {
           pointerEvents: "none",
         }}
       />
-      <div className="relative z-10 flex w-full max-w-[680px] flex-col items-start gap-12 text-left">
+      {/* Wrapper que centraliza o bloco de texto dentro de uma faixa de até 1440px,
+          só a partir do breakpoint "uw" (ultrawide/4K/5K, 3440px+). Fora disso é
+          w-full puro, sem efeito — comportamento atual (mobile a 2560px) inalterado. */}
+      <div className="relative z-10 flex w-full uw:mx-auto uw:max-w-[1440px]">
+      <div className="flex w-full max-w-[680px] flex-col items-start gap-12 text-left">
         {/* Lockup: logo "Broadway Export LLC" */}
         <BroadwayLockup className="h-[26px] w-auto max-w-full sm:h-[40px] lg:h-[74px]" />
 
@@ -112,6 +116,7 @@ export default function BroadwayHeroV3() {
             management.
           </p>
         </div>
+      </div>
       </div>
       </div>
     </section>
